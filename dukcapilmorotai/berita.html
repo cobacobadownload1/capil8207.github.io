@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - Dukcapil Pulau Morotai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .news-item { margin-bottom: 30px; }
+        .gallery img { width: 100%; height: 200px; object-fit: cover; }
+        .map { height: 300px; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dukcapil Pulau Morotai</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#news">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Section -->
+    <section id="news" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Berita Terkini</h2>
+            <div class="news-item">
+                <h3>Update Layanan Online Dukcapil</h3>
+                <p class="text-muted">Tanggal: 15 Oktober 2023</p>
+                <img src="https://via.placeholder.com/800x400?text=Update+Layanan+Online" alt="Update Layanan" class="img-fluid mb-3">
+                <p>Kami telah meluncurkan sistem pendaftaran online untuk memudahkan masyarakat Pulau Morotai dalam mengurus administrasi kependudukan. Sistem ini terintegrasi dengan aplikasi Dukcapil nasional dan dapat diakses melalui website resmi.</p>
+            </div>
+            <div class="news-item">
+                <h3>Jadwal Vaksinasi dan Pencatatan Kesehatan</h3>
+                <p class="text-muted">Tanggal: 10 Oktober 2023</p>
+                <img src="https://via.placeholder.com/800x400?text=Jadwal+Vaksinasi" alt="Vaksinasi" class="img-fluid mb-3">
+                <p>Informasi jadwal vaksinasi terkini di Pulau Morotai. Pastikan data kesehatan Anda tercatat dengan akurat di sistem kami untuk akses layanan kesehatan yang lebih baik.</p>
+            </div>
+            <div class="news-item">
+                <h3>Pelatihan Petugas Pencatatan Sipil</h3>
+                <p class="text-muted">Tanggal: 5 Oktober 2023</p>
+                <img src="https://via.placeholder.com/800x400?text=Pelatihan+Petugas" alt="Pelatihan" class="img-fluid mb-3">
+                <p>Petugas Dukcapil mengikuti pelatihan intensif untuk meningkatkan kualitas pelayanan. Ini bagian dari komitmen kami terhadap akurasi data kependudukan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Galeri Foto</h2>
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://via.placeholder.com/800x400?text=Kantor+Dukcapil" class="d-block w-100 gallery" alt="Kantor Dukcapil">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/800x400?text=Layanan+KTP" class="d-block w-100 gallery" alt="Layanan KTP">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/800x400?text=Akta+Kelahiran" class="d-block w-100 gallery" alt="Akta Kelahiran">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Lokasi Kantor</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789012!2d128.123456!3d0.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMC4xMjM0NTY!5e0!3m2!1sen!2sid!4v1634567890123!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="map"></iframe>
+            <p class="mt-3">Alamat: Jl. Raya Pulau Morotai, Kabupaten Pulau Morotai, Maluku Utara. (Koordinat dummy; ganti dengan lokasi sebenarnya dari Google Maps.)</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3 text-center">
+        <div class="container">
+            <p>&copy; 2023 Dinas Kependudukan dan Pencatatan Sipil Pulau Morotai. Semua hak dilindungi.</p>
+            <p><a href="https://www.kemendagri.go.id/">Tautan ke Kementerian Dalam Negeri</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
