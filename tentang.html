@@ -1,0 +1,42 @@
+<!-- Online Registration Form -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Pendaftaran Online KTP</h2>
+        <form id="registrationForm">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="fullName" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="fullName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="nik" class="form-label">NIK</label>
+                    <input type="text" class="form-control" id="nik" pattern="[0-9]{16}" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="birthDate" class="form-label">Tanggal Lahir</label>
+                    <input type="date" class="form-control" id="birthDate" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="address" class="form-label">Alamat</label>
+                    <textarea class="form-control" id="address" rows="2" required></textarea>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="document" class="form-label">Upload Dokumen (KK, dll.)</label>
+                <input type="file" class="form-control" id="document" accept=".pdf,.jpg,.png" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Daftar</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Simulasi pengiriman (integrasikan dengan backend untuk nyata)
+        alert('Pendaftaran berhasil dikirim! Kami akan memproses dalam 3-5 hari kerja. (Ini simulasi; gunakan API untuk pengiriman data.)');
+        this.reset();
+    });
+</script>

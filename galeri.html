@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Dukcapil Pulau Morotai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .gallery-section { padding: 50px 0; }
+        .gallery-item { margin-bottom: 20px; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s; }
+        .gallery-item img:hover { transform: scale(1.05); }
+        .filter-btn { margin: 0 5px 10px 0; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dukcapil Pulau Morotai</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#gallery">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Galeri Foto</h2>
+            <div class="mb-4">
+                <button class="btn btn-outline-primary filter-btn" data-filter="all">Semua</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="kantor">Kantor</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="layanan">Layanan</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="acara">Acara</button>
+            </div>
+            <div class="row" id="galleryGrid">
+                <div class="col-md-4 gallery-item" data-category="kantor">
+                    <img src="https://via.placeholder.com/400x300?text=Kantor+Dukcapil" alt="Kantor Dukcapil" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="https://via.placeholder.com/800x600?text=Kantor+Dukcapil" data-caption="Kantor Dinas Kependudukan dan Pencatatan Sipil Pulau Morotai">
+                </div>
+                <div class="col-md-4 gallery-item" data-category="layanan">
+                    <img src="https://via.placeholder.com/400x300?text=Layanan+KTP" alt="Layanan KTP" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="https://via.placeholder.com/800x600?text=Layanan+KTP" data-caption="Proses pendaftaran KTP di kantor">
+                </div>
+                <div class="col-md-4 gallery-item" data-category="acara">
+                    <img src="https://via.placeholder.com/400x300?text=Acara+Pelatihan" alt="Acara Pelatihan" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="https://via.placeholder.com/800x600?text=Acara+Pelatihan" data-caption="Pelatihan petugas Dukcapil 2023">
+                </div>
+                <div class="col-md-4 gallery-item" data-category="kantor">
+                    <img src="https://via.placeholder.com/400x300?text=Ruang+Kerja" alt="Ruang Kerja" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="https://via.placeholder.com/800x600?text=Ruang+Kerja" data-caption="Ruang kerja petugas administrasi">
+                </div>
+                <div class="col-md-4 gallery-item" data-category="layanan">
+                    <img src="https://via.placeholder.com/400x300?text=Akta+Kelahiran" alt="Akta Kelahiran" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="https://via.placeholder.com/800x600?text=Akta+Kelahiran" data-caption="Penerbitan akta kelahiran">
+                </div>
+                <div class="col-md-4 gallery-item" data-category="acara">
+                    <img src="https://via.placeholder.com/400x300?text=Seminar+Kependudukan" alt="Seminar" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="https://via.placeholder.com/800x600?text=Seminar+Kependudukan" data-caption="Seminar tentang administrasi kependudukan">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Detail -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Detail Gambar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="" class="img-fluid">
+                    <p id="modalCaption" class="mt-3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3 text-center">
+        <div class="container">
+            <p>&copy; 2023 Dinas Kependudukan dan Pencatatan Sipil Pulau Morotai. Semua hak dilindungi.</p>
+            <p><a href="https://www.kemendagri.go.id/">Tautan ke Kementerian Dalam Negeri</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                const items = document.querySelectorAll('.gallery-item');
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                const src = this.getAttribute('data-src');
+                const caption = this.getAttribute('data-caption');
+                document.getElementById('modalImage').src = src;
+                document.getElementById('modalCaption').textContent = caption;
+            });
+        });
+    </script>
+</body>
+</html>
